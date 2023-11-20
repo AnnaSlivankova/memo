@@ -1,0 +1,118 @@
+@mixin button {
+  cursor: pointer;
+
+  display: inline-flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 28px;
+
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-bold);
+  font-style: normal;
+
+  border: transparent;
+  border-radius: 4px;
+
+  &:focus-visible {
+    outline: 2px solid var(--color-info-700);
+  }
+}
+
+.primary {
+  @include button;
+
+  background: var(--color-accent-500);
+  box-shadow: 0 4px 18px 0 rgb(140 97 255 / 35%);
+
+  &:active:enabled {
+    background: var(--color-accent-700);
+    outline-color: transparent;
+  }
+
+  &:hover {
+    background: var(--color-accent-300);
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+    background: var(--color-accent-900);
+  }
+
+
+}
+
+.secondary {
+  @include button;
+
+  background: var(--color-dark-300);
+  box-shadow: 0 2px 10px 0 rgb(109 109 109 / 25%);
+
+  &:active:enabled {
+    background: var(--color-dark-500);
+    outline-color: transparent;
+  }
+
+  &:hover {
+    background: var(--color-dark-100);
+  }
+
+  &:disabled {
+    color: var(--color-light-900);
+    background: var(--color-dark-300);
+  }
+}
+
+.tertiary {
+  @include button;
+
+  color: var(--color-accent-500);
+  background: transparent;
+  border: 1px solid var(--color-accent-500);
+
+  &:active:enabled {
+    background: var(--color-accent-900);
+    outline-color: transparent;
+  }
+
+  &:hover {
+    background: var(--color-dark-500);
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+    background: transparent;
+    border-color: var(--color-accent-900);
+  }
+}
+
+.link {
+  @include button;
+
+  color: var(--color-accent-500);
+  background: transparent;
+
+  &:active:enabled {
+    color: var(--color-accent-700);
+    outline-color: transparent;
+  }
+
+  &:hover {
+    color: var(--color-accent-300);
+  }
+
+  &:focus-visible {
+    border-radius: 130px;
+    outline: 2px solid var(--color-info-700);
+  }
+
+  &:disabled {
+    color: var(--color-accent-900);
+    background: transparent;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
