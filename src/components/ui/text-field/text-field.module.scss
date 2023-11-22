@@ -1,0 +1,129 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  > span {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-regular);
+  }
+}
+
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.iconStart {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  display: grid;
+  place-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  color: var(--color-light-100);
+}
+
+.iconEnd {
+  all: unset;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+
+  display: grid;
+  place-items: center;
+
+  width: 20px;
+  height: 20px;
+
+  color: var(--color-light-100);
+}
+
+.input {
+  cursor: pointer;
+
+  width: 100%;
+  padding: 6px 12px;
+
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  color: var(--color-dark-100);
+
+  background-color: transparent;
+  border: 1px solid var(--color-dark-300);
+  border-radius: 2px;
+  outline: none;
+
+
+
+  &::placeholder {
+    color: var(--color-dark-100);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-info-700);
+  }
+
+  &:focus,
+  &:active {
+    color: var(--color-light-100);
+    border-color: var(--color-light-100);
+    outline: none;
+
+    &::placeholder {
+      color: var(--color-light-100);
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-dark-700);
+  }
+
+  &.hasIconStart {
+    padding-left: 41px;
+  }
+}
+
+.inputContainer.disabled {
+  .iconStart,
+  .iconEnd {
+    color: var(--color-dark-300);
+  }
+
+  input::placeholder {
+    color: var(--color-dark-300);
+  }
+}
+
+.label {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  color: var(--color-dark-100);
+}
+
+.label.disabled {
+  color: var(--color-dark-300);
+}
+
+.error {
+  color: var(--color-danger-300);
+  border-color: var(--color-danger-300);
+
+  &::placeholder {
+    color: var(--color-danger-300);
+  }
+}
+
