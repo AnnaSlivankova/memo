@@ -57,9 +57,11 @@ export const RadioGroup = ({
 };
 
 type RadioGroupProps = {
+  disabled?: boolean;
   onValueChange?: (value: number | string) => void;
   options: Option[];
-} & ComponentPropsWithoutRef<"input">;
+  value?: any;
+} & ComponentPropsWithoutRef<"div">;
 
 type Option = {
   label: string;
