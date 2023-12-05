@@ -32,10 +32,10 @@ const router = createBrowserRouter([
 ])
 
 export const Router = () => {
-  const test = useGetDecksQuery()
+  // const test = useGetDecksQuery()
 
-  console.log(test)
-  console.log('router render')
+  // console.log(test)
+  // console.log('router render')
 
   return <RouterProvider router={router} />
 }
