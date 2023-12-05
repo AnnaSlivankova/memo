@@ -17,10 +17,12 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
-  args: {},
+  args: {
+    align: 'end',
+  },
   render: args => {
     return (
-      <DropdownMenu align={'end'}>
+      <DropdownMenu align={args.align}>
         <DropdownMenuItem>
           <Learn />
           Learn
@@ -41,11 +43,13 @@ export const Basic: Story = {
 }
 
 export const Profile: Story = {
-  args: {},
+  args: {
+    align: 'end',
+  },
   render: args => {
     return (
       <DropdownMenu
-        align={'end'}
+        align={args.align}
         trigger={
           <img
             alt={'user-ava'}

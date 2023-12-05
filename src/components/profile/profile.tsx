@@ -1,4 +1,4 @@
-import { Logout } from '@/assets'
+import { LogoutIcon } from '@/assets'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Typography } from '@/components/ui/typography'
@@ -21,7 +21,7 @@ export const Profile = () => {
       </Typography>
 
       <Button variant={'secondary'}>
-        <Logout /> Logout
+        <LogoutIcon /> Logout
       </Button>
     </Card>
   )

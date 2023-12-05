@@ -33,7 +33,7 @@ export const InputWithoutLabel: Story = {
 export const InputWithError: Story = {
   args: {
     disabled: false,
-    error: 'some error',
+    errorMessage: 'some error',
     id: '1',
     label: 'Enter Input',
     placeholder: 'Input',
