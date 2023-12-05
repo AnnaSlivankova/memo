@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom'
 
 import { SigninForm } from '@/components/auth/signin/signin-form'
-import { useGetDecksQuery } from '@/services/base-api'
+// import { useGetDecksQuery } from '@/services/base-api'
 
 const publicRoutes: RouteObject[] = [
   {
